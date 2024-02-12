@@ -428,7 +428,7 @@ function getNearestBigger(number) {
   }
   [nums[ind], nums[smallNumInd]] = [nums[smallNumInd], nums[ind]];
   const sortedNum = nums.splice(ind + 1).sort((a, b) => a - b);
-  const nearLargeNum = Number(nums.concat(sortedNum).join(''));
+  const nearLargeNum = +nums.concat(sortedNum).join('');
   return nearLargeNum;
 }
 
